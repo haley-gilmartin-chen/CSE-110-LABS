@@ -2,7 +2,6 @@
 h2 {
     scroll-margin-top: 175px;
 }
-
 .Section1{
     background-color: rgb(245, 240, 230);
     width: 100%;
@@ -37,11 +36,6 @@ p {
     gap: 25px;
     padding: 14px 16px;
     
-    div {
-        background-color: #182b49;
-        max-height: 500px;
-        overflow: scroll;
-    }
     p{
         color: white
     }
@@ -57,6 +51,47 @@ p {
     .four {
         grid-column: 4;
       }
+}
+
+.Section3 div {
+  background-color: #182b49;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+@media (max-width: 768px) {
+
+  .Section3 {
+      background-color: rgb(245, 240, 230);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 100px repeat(2, 1fr);
+      gap: 25px;
+      padding: 14px 16px;
+      h2 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .one {
+        grid-column: 1;
+        grid-row: 2;
+        }
+      .two {
+          grid-column: 2;
+          grid-row: 2;
+        }
+      .three {
+          grid-column: 1;
+          grid-row: 3;
+        }
+      .four {
+          grid-column: 2;
+          grid-row: 3;
+        }
+  }
+  .navbar ul {
+      display: none; 
+  }
 }
 
 .navbar{
